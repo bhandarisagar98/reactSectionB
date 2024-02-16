@@ -5,6 +5,8 @@ import axios from "axios";
 import Card from "./components/Card";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SingleBlog from "./pages/SingleBlog";
+import Dashboard from "./pages/admin/Dashboard";
+import Home from "./pages/admin/Home";
 
 function App() {
   const [data, setData] = useState([]);
@@ -45,6 +47,10 @@ function App() {
           }
         />
         <Route path="/:id" element={<SingleBlog />} />
+
+        <Route path="/dashboard/" element={<Dashboard />}>
+          <Route path="" element={<Home />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
