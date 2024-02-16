@@ -15,9 +15,13 @@ const Create = () => {
       "https://65cdc8f5c715428e8b3f0df3.mockapi.io/blog",
       formData
     );
+    if (res.status === 201) {
+      alert("created blog successfully");
+    }
   };
   return (
     <div>
+      <p style={{ color: "red" }}>Create Blog</p>
       <form onSubmit={createBlog}>
         <input type="text" name="name" placeholder="name" />
         <input type="text" name="avatar" placeholder="avatar" />

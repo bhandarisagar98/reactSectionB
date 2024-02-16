@@ -3,25 +3,27 @@ import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div style={{ color: "white" }}>
       <div
         style={{
-          textAlign: "center",
-          color: "white",
+          width: "100%",
           background: "blue",
+          color: "white",
           padding: "10px",
         }}
       >
-        <p>admin</p>
+        <p style={{ textAlign: "center" }}>Admin</p>
       </div>
-      <div>
+      <div style={{ display: "flex" }}>
         <div
           style={{
             width: "200px",
-            background: "grey",
             height: "100vh",
+            background: "#dddddd",
+            padding: "20px",
             display: "flex",
             flexDirection: "column",
+            color: "white",
           }}
         >
           <Link style={{ textDecoration: "none" }} to="/dashboard">
@@ -31,7 +33,15 @@ const Dashboard = () => {
             Create
           </Link>
         </div>
-        <div style={{ width: "100%", height: "100vh" }}>
+        <div
+          style={{
+            width: "200px",
+            height: "100vh",
+            width: "100%",
+            background: "white",
+            padding: "20px",
+          }}
+        >
           <Outlet />
         </div>
       </div>
@@ -40,7 +50,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-
-
-// https://github.com/bhandarisagar98/reactSectionB
